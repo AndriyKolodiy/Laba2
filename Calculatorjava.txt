@@ -1,61 +1,44 @@
-import java.util.Scanner;
- 
-public class Calculator {
-    static Scanner scanner = new Scanner(System.in);
- 
-    public static void main(String[] args) {
-        int num1 = getInt();
-        int num2 = getInt();
-        char operation = getOperation();
-        int result = calc(num1,num2,operation);
-        System.out.println(Результат операции: +result);
-    }
- 
-    public static int getInt(){
-        System.out.println(Введите число:);
-        int num;
-        if(scanner.hasNextInt()){
-            num = scanner.nextInt();
-        } else {
-            System.out.println(Вы допустили ошибку при вводе числа. Попробуйте еще раз.);
-            scanner.next();//рекурсия
-            num = getInt();
-        }
-        return num;
-    }
- 
-    public static char getOperation(){
-        System.out.println(Введите операцию:);
-        char operation;
-        if(scanner.hasNext()){
-            operation = scanner.next().charAt(0);
-        } else {
-            System.out.println(Вы допустили ошибку при вводе операции. Попробуйте еще раз.);
-            scanner.next();//рекурсия
-            operation = getOperation();
-        }
-        return operation;
-    }
- 
-    public static int calc(int num1, int num2, char operation){
-        int result;
-        switch (operation){
-            case '+':
-                result = num1+num2;
-                break;
-            case '-':
-                result = num1-num2;
-                break;
-            case '*':
-                result = num1*num2;
-                break;
-            case '/':
-                result = num1/num2;
-                break;
-            default:
-                System.out.println(Операция не распознана. Повторите ввод.);
-                result = calc(num1, num2, getOperation());//рекурсия
-        }
-        return result;
-    }
-}
+<html>
+<head>
+</head>
+
+<body>
+
+<table border="5" style="background-color:#c8a2c8">
+
+    <td>
+
+      <img src="https://ratatum.com/wp-content/uploads/2017/07/2017-07-03_12-29-09-min.jpg" style="float:right;margin:15px 15px 15px 15px" width="1150"/>
+
+    </td>
+    <tr colspan="1" >
+    <td height="80xp">
+
+        <ul style="list-style-type:circle;line-height:20px">
+
+            <li><font color="yellow" face="Verdana">Juice wrld</font></li>
+
+            <li><font color="yellow" face="Verdana">21 Savage</font></li>
+
+            <li><font color="yellow" face="Verdana">Obladaet</font></li>
+
+        </ul>
+
+
+        <ol start="1" style="list-style-type:number;line-height:20px";color="yellow">
+
+            <li><font color="yellow" face="Verdana">˛íîçĺěíŕ</font></li>
+
+            <li><font color="yellow" face="Verdana">Âńňóď</font></li>
+
+            <li><font color="yellow" face="Verdana">Âĺá</font></li>
+
+        </ol>
+
+    </td>
+</tr>
+</table>
+
+</body>
+
+</html>
